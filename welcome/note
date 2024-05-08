@@ -1,0 +1,19 @@
+php là ngôn ngữ bậc cao, chạy ở server
+cách thức hoạt động:
+phương thức request, response từ brower đến server
+
+
+Bài 05: hướng dẫn dùng biến-comment-debug trong Php
+Biến:
+-Cú pháp: $ten_bien
+-Ví dụ: $customer_name
+-Lưu ý:
+    tên bắt đầu bằng chữ cái hoặc gạch dưới
+    tên biến chứa các chữ cái, chữ số, kí tự gạch dưới
+    Php phân biệt chữ hoa, thường
+    không cần khai báo dữ liệu
+    nên đặt tên theo quy tắc camelCase($userId)
+-Debug dữ liệu: thường không show ra cho người dùng biết
+    vardump($var): trả về kiểu dữ liệu và độ dài của chuỗi, mảng.
+    print_r(): áp dụng với mảng và đối tượng
+

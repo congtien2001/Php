@@ -1,0 +1,1 @@
+hằng là biến nhưng hằng không thể thay đổi được giá trị

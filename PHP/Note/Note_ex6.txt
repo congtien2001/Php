@@ -1,0 +1,13 @@
+   /*
+   phân biệt '' và dấu ""
+   1. Kiểu dữ liệu:
+   ' (kích đơn) khai báo chuỗi kiểu chuỗi đơn (single quoted string).
+   " (kích kép) khai báo chuỗi kiểu chuỗi kép (double quoted string).
+   2. Xử lý biến:
+   ' (kích đơn) không hỗ trợ xử lý biến trong chuỗi.
+   " (kích kép) có thể xử lý biến trong chuỗi. 
+   ' (kích đơn) nhanh hơn " (kích kép) vì không cần xử lý biến và ký tự đặc biệt.
+   Nên sử dụng loại nào?
+   Nên sử dụng ' (kích đơn) khi chuỗi không chứa biến hoặc ký tự đặc biệt để tăng hiệu suất.
+   Nên sử dụng " (kích kép) khi chuỗi có chứa biến hoặc ký tự đặc biệt để đảm bảo tính chính xác.
+   */

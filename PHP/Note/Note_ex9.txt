@@ -1,0 +1,7 @@
+Số nguyên (Integer): Lưu trữ các số nguyên dương, âm hoặc 0. Ví dụ: 10, -200, 0.
+Số thực (Float): Lưu trữ các số thập phân. Ví dụ: 3.14, -5.2, 1000000000.0.
+Chuỗi (String): Lưu trữ chuỗi các ký tự, được đặt trong dấu nháy đơn (') hoặc dấu nháy kép ("). Ví dụ: "Xin chào!", 'Đây là một chuỗi.', '123'.
+Mảng (Array): Lưu trữ một tập hợp các giá trị, có thể truy cập bằng chỉ mục hoặc khóa. Ví dụ: $arr = [1, 2, 3, "a", "b", "c"];, $arr["name"] = "Bard";.
+Boolean (Đúng/Sai): Lưu trữ giá trị TRUE hoặc FALSE. Ví dụ: $isTrue = true;, $isFalse = false;.
+NULL: Biểu thị giá trị rỗng hoặc không xác định. Ví dụ: $variable = null;.
+Đối tượng (Object): Biểu diễn một thực thể trong lập trình hướng đối tượng, bao gồm các thuộc tính và phương thức. Ví dụ: $person = new Person();, $person->name = "Bard";.

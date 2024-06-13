@@ -1,0 +1,8 @@
+dấu sắc, huyền đều là 1 byte còn dấu nặng là 2 byte
+strlen(): Đếm số lượng ký tự trong chuỗi.
+strtoupper(): Chuyển đổi chuỗi thành chữ hoa.
+strtolower(): Chuyển đổi chuỗi thành chữ thường.
+substr(): Lấy một phần chuỗi con.
+strpos(): Tìm kiếm vị trí xuất hiện đầu tiên của một chuỗi con trong chuỗi.
+str_replace(): Thay thế tất cả các lần xuất hiện của một chuỗi con trong chuỗi bằng một chuỗi khác.
+trim(): Xóa khoảng trắng ở đầu và cuối chuỗi.

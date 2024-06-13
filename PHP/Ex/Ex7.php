@@ -13,5 +13,15 @@
      {
           echo "biến a bằng 10!";
      }
-     
+     /* 
+    $dtb = 5;
+    if($dtb>=8){
+        echo"Học sinh giỏi";
+    }
+    else if($dtb<=8 && $dtb>= 6){
+        echo "Học sinh khá";
+    } 
+    else
+        echo("Học sinh trung bình")   
+     */
 ?>

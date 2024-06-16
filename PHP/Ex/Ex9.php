@@ -4,10 +4,10 @@
     $age = 23;
     $number = 8.0;
     //kiểm tra
-    var_dump( $name );
+    var_dump($name);
     echo"<br>";
-    var_dump( $age );
+    var_dump($age);
     echo "<br>";
-    var_dump( $number );
+    var_dump($number);
 
 ?>

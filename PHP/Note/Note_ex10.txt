@@ -1,0 +1,14 @@
+//toán tử logic
+-&&: và
+-||(or): hoặc 
+-!: đảo ngược kết quả
+    vd:
+$result = !(5 > 3);
+echo $result; // false
+-^ (xor): hiển thị kq đúng nếu có 1 trong 2 đk đúng
+còn 2 true hay 2 flase đều trả về flase
+    vd:
+$a = 5;
+$b = 3;
+$result = ($a > $b) ^ ($a < $b);
+echo $result; // true

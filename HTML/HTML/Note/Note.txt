@@ -1,2 +1,5 @@
 thẻ đoạn văn: <p>
 lorem: tự tạo văn bản có thể lorem5, lorem*3
+<b>: thẻ in đậm
+<i>: thẻ in nghiêng
+<u>: thẻ gạch chân

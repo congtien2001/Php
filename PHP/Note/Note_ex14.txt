@@ -1,0 +1,2 @@
+-thực thi code rồi mới kiểm tra điều kiện
+-điều kiện sai nhưng code vẫn chạy

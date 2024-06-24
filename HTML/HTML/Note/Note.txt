@@ -3,3 +3,6 @@ lorem: tự tạo văn bản có thể lorem5, lorem*3
 <b>: thẻ in đậm
 <i>: thẻ in nghiêng
 <u>: thẻ gạch chân
+<ul>: thẻ không có thứ tự
+<ol>: thẻ có thứ tự
+<li>: thẻ con trực tiếp của ul, ol

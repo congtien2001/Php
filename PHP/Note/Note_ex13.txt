@@ -1,0 +1,21 @@
+vòng lặp while khai báo biến rồi mới đến điều kiện
+Trong PHP, vòng lặp while được sử dụng để lặp lại một khối mã cho đến khi một điều kiện cụ thể không còn đúng nữa. Cú pháp của vòng lặp while trong PHP như sau:
+
+while (điều kiện) {
+    // mã cần lặp lại
+}
+Trong đó:
+điều kiện: là điều kiện để kiểm tra xem vòng lặp có tiếp tục thực thi hay không. Nếu điều kiện là đúng (true), vòng lặp sẽ tiếp tục; ngược lại, nếu điều kiện là sai (false), vòng lặp sẽ dừng.
+Ví dụ sử dụng vòng lặp while trong PHP:
+
+$i = 0;
+while ($i < 5) {
+    echo "Lần lặp thứ " . ($i + 1) . "<br>";
+    $i++;
+}
+Kết quả sẽ là:
+Lần lặp thứ 1
+Lần lặp thứ 2
+Lần lặp thứ 3
+Lần lặp thứ 4
+Lần lặp thứ 5

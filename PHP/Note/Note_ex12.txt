@@ -1,0 +1,20 @@
+Trong PHP, vòng lặp for được sử dụng để lặp lại một khối mã một số lần theo một số lần lặp xác định. Cú pháp của vòng lặp for trong PHP như sau:
+
+for (từ; đến; bước) {
+    // mã cần lặp lại
+}
+Trong đó:
+
+từ: là giá trị bắt đầu của biến điều khiển vòng lặp.
+đến: là giá trị kết thúc của biến điều khiển vòng lặp.
+bước: là bước điều chỉnh giá trị của biến điều khiển vòng lặp sau mỗi lần lặp.
+Ví dụ sử dụng vòng lặp for trong PHP:
+for ($i = 0; $i < 5; $i++) {
+    echo "Lần lặp thứ " . ($i + 1) . "<br>";
+}
+Kết quả sẽ là:
+Lần lặp thứ 1
+Lần lặp thứ 2
+Lần lặp thứ 3
+Lần lặp thứ 4
+Lần lặp thứ 5

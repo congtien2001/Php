@@ -1,1 +1,0 @@
-dấu chấm dùng để nối biến

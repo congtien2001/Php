@@ -17,6 +17,10 @@ Biến:
 
         NỐI BIẾN
 Đối với dấu nháy đơn (' ') thì khi nối biến phải có dấu chấm(.).
+Nháy đơn nhanh hơn nháy kép ('')>("") vì không cần xử lý biến và ký tự đặc biệt.
+Nên sử dụng loại nào?
+   Nên sử dụng ' (kích đơn) khi chuỗi không chứa biến hoặc ký tự đặc biệt để tăng hiệu suất.
+   Nên sử dụng " (kích kép) khi chuỗi có chứa biến hoặc ký tự đặc biệt để đảm bảo tính chính xác.
 vd:
 $name = 'Tien'
 echo 'Nguyen Cong'.$name;
@@ -45,3 +49,21 @@ echo "Nguyen Cong $name ";
 -Hằng không biến đổi
 -Có thể dùng const để khai báo hằng
 
+
+
+
+
+Câu lệnh rẽ nhánh SWITCH-CASE
+Được dùng khi câu điều kiện có nhiều nhánh.
+Giá trị case chỉ chấp nhận: số nguyên, String, Boolean, Null, Số thực.
+Cú pháp:
+    switch ($ten_bien){
+        //danh sách câu lệnh
+        case 'gia_tri1';
+        case 'gia_tri2';
+        case 'gia_tri3';
+        break;
+        //danh sách câu lệnh
+        default://giống như else bên if vậy, hiển thị các trường hợp còn lại
+        break;
+    }

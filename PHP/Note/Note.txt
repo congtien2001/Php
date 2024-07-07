@@ -2,7 +2,7 @@ php là ngôn ngữ bậc cao, chạy ở server
 cách thức hoạt động:
 phương thức request, response từ brower đến server
 
-Biến:
+            BIẾN
 -Cú pháp: $ten_bien
 -Ví dụ: $customer_name
 -Lưu ý:
@@ -15,7 +15,7 @@ Biến:
     vardump($var): trả về kiểu dữ liệu và độ dài của chuỗi, mảng.
     print_r(): áp dụng với mảng và đối tượng
 
-        NỐI BIẾN
+            NỐI BIẾN
 Đối với dấu nháy đơn (' ') thì khi nối biến phải có dấu chấm(.).
 Nháy đơn nhanh hơn nháy kép ('')>("") vì không cần xử lý biến và ký tự đặc biệt.
 Nên sử dụng loại nào?
@@ -36,24 +36,23 @@ $name = 'Tien'
 echo "Nguyen Cong $name ";
     => hiển thị: Nguyen Cong Tien
 
-        HƯỚNG DẪN KHAI BÁO VÀ SỬ DỤNG HẰNG SỐ
+            HƯỚNG DẪN KHAI BÁO VÀ SỬ DỤNG HẰNG SỐ
+-Hằng số là tên hoặc mã định danh không thể thay đổi trong khi thực hiện chương trình.
+
+-hằng số có thể được định nghĩa theo 2 cách:
+    +Sử dụng hàm define().
+    +Sử dụng từ khoá const.
 -Khai báo: define('ten_hang', 'giá trị ');
+-Có thể dùng const để khai báo hằng: const ten_hang=gia_tri;
 -Sử dụng: ten_hang
 -Đặt tên hằng:
     + Chứa các chữ cái, chữ số, dấu gạch dưới
     +Phân biệt chữ hoa chữ thường
     +Nên đặt tên theo quy tắc underscore nhưng viết hoa (WEB_HOST_ROOT)
     hoặc để dấu gạch phía trước
-
 -Hằng số chỉ khai báo một lần
--Hằng không biến đổi
--Có thể dùng const để khai báo hằng
 
-
-
-
-
-Câu lệnh rẽ nhánh SWITCH-CASE
+            CÂU LỆNH RẼ NHÁNH SWITCH-CASE
 Được dùng khi câu điều kiện có nhiều nhánh.
 Giá trị case chỉ chấp nhận: số nguyên, String, Boolean, Null, Số thực.
 Cú pháp:
@@ -67,3 +66,18 @@ Cú pháp:
         default://giống như else bên if vậy, hiển thị các trường hợp còn lại
         break;
     }
+    
+            VÒNG LẶP FOR
+Vòng lặp là đoạn mã lệnh trong đó chương trình được lặp đi lặp lại nhiều lần cho đến khi thoã đk đó
+Trong php có 4 loại vòng lặp:
+    for: lặp với số lần xác định trước.
+    while và do while: lặp với số lần lặp không xác định trước.
+    foreach: dùng để lặp các phần tử trong mảng.
+Cú pháp:
+    for($ten_bien = giá trị đầu; điều kiện dừng; biểu thức tăng-giảm){
+        //Câu lệnh        
+    }
+VD:
+    for($i=0; $i<10; $i++){
+        echo $i.'<br>';
+    }    

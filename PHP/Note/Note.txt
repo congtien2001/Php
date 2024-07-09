@@ -6,21 +6,21 @@ phương thức request, response từ brower đến server
 -Cú pháp: $ten_bien
 -Ví dụ: $customer_name
 -Lưu ý:
-    tên bắt đầu bằng chữ cái hoặc gạch dưới
-    tên biến chứa các chữ cái, chữ số, kí tự gạch dưới
-    Php phân biệt chữ hoa, thường
-    không cần khai báo dữ liệu
-    nên đặt tên theo quy tắc camelCase($userId)
+    +tên bắt đầu bằng chữ cái hoặc gạch dưới
+    +tên biến chứa các chữ cái, chữ số, kí tự gạch dưới
+    +Php phân biệt chữ hoa, thường
+    +không cần khai báo dữ liệu
+    +nên đặt tên theo quy tắc camelCase($userId)
 -Debug dữ liệu: thường không show ra cho người dùng biết
-    vardump($var): trả về kiểu dữ liệu và độ dài của chuỗi, mảng.
-    print_r(): áp dụng với mảng và đối tượng
+    +vardump($var): trả về kiểu dữ liệu và độ dài của chuỗi, mảng.
+    +print_r(): áp dụng với mảng và đối tượng
 
             NỐI BIẾN
-Đối với dấu nháy đơn (' ') thì khi nối biến phải có dấu chấm(.).
-Nháy đơn nhanh hơn nháy kép ('')>("") vì không cần xử lý biến và ký tự đặc biệt.
-Nên sử dụng loại nào?
-   Nên sử dụng ' (kích đơn) khi chuỗi không chứa biến hoặc ký tự đặc biệt để tăng hiệu suất.
-   Nên sử dụng " (kích kép) khi chuỗi có chứa biến hoặc ký tự đặc biệt để đảm bảo tính chính xác.
+-Đối với dấu nháy đơn (' ') thì khi nối biến phải có dấu chấm(.).
+-Nháy đơn nhanh hơn nháy kép ('')>("") vì không cần xử lý biến và ký tự đặc biệt.
+-Nên sử dụng loại nào?
+   +Nên sử dụng ' (kích đơn) khi chuỗi không chứa biến hoặc ký tự đặc biệt để tăng hiệu suất.
+   +Nên sử dụng " (kích kép) khi chuỗi có chứa biến hoặc ký tự đặc biệt để đảm bảo tính chính xác.
 vd:
 $name = 'Tien'
 echo 'Nguyen Cong'.$name;
@@ -29,8 +29,8 @@ else
 echo 'Nguyen Cong $name';
     => hiển thị: Nguyen Cong $name (lỗi)
 
-Còn đối với dấu nháy kép (" ") thì khi nối biến có thể để vào trong
-dấu nháy cũng được và không cần nối chuỗi.
+-Còn đối với dấu nháy kép (" ") thì khi nối biến có thể để vào trong
+-Dấu nháy cũng được và không cần nối chuỗi.
 vd:
 $name = 'Tien'
 echo "Nguyen Cong $name ";
@@ -39,7 +39,7 @@ echo "Nguyen Cong $name ";
             HƯỚNG DẪN KHAI BÁO VÀ SỬ DỤNG HẰNG SỐ
 -Hằng số là tên hoặc mã định danh không thể thay đổi trong khi thực hiện chương trình.
 
--hằng số có thể được định nghĩa theo 2 cách:
+-Hằng số có thể được định nghĩa theo 2 cách:
     +Sử dụng hàm define().
     +Sử dụng từ khoá const.
 -Khai báo: define('ten_hang', 'giá trị ');
@@ -53,9 +53,9 @@ echo "Nguyen Cong $name ";
 -Hằng số chỉ khai báo một lần
 
             CÂU LỆNH RẼ NHÁNH SWITCH-CASE
-Được dùng khi câu điều kiện có nhiều nhánh.
-Giá trị case chỉ chấp nhận: số nguyên, String, Boolean, Null, Số thực.
-Cú pháp:
+-Được dùng khi câu điều kiện có nhiều nhánh.
+-Giá trị case chỉ chấp nhận: số nguyên, String, Boolean, Null, Số thực.
+-Cú pháp:
     switch ($ten_bien){
         //danh sách câu lệnh
         case 'gia_tri1';
@@ -68,12 +68,12 @@ Cú pháp:
     }
     
             VÒNG LẶP FOR
-Vòng lặp là đoạn mã lệnh trong đó chương trình được lặp đi lặp lại nhiều lần cho đến khi thoã đk đó
-Trong php có 4 loại vòng lặp:
-    for: lặp với số lần xác định trước.
-    while và do while: lặp với số lần lặp không xác định trước.
-    foreach: dùng để lặp các phần tử trong mảng.
-Cú pháp:
+-Vòng lặp là đoạn mã lệnh trong đó chương trình được lặp đi lặp lại nhiều lần cho đến khi thoã đk đó
+-Trong php có 4 loại vòng lặp:
+    +for: lặp với số lần xác định trước.
+    +while và do while: lặp với số lần lặp không xác định trước.
+    +foreach: dùng để lặp các phần tử trong mảng.
+-Cú pháp:
     for($ten_bien = giá trị đầu; điều kiện dừng; biểu thức tăng-giảm){
         //Câu lệnh        
     }
@@ -81,3 +81,32 @@ VD:
     for($i=0; $i<10; $i++){
         echo $i.'<br>';
     }    
+            VÒNG LẶP WHILE, DO-WHILE 
+-Được lặp cho đến khi điều kiện là false
+-Cú pháp while: 
+    while(dieu_kien_dung){
+        //danh sách lệnh
+    }
+-Lưu ý:
+    +Vòng lặp while sẽ lặp với số lần không xác định trước. Có nghĩa phải có đk thoát trong vòng lặp. 
+    +Vòng lặp while có thể bị treo nếu phân xử lý thoát vòng lặp bị sai hoặc không triệt để.
+    +Vòng lặp while có thế không chạy nếu không thoã mãn đk.
+-Cú pháp do-while:
+    do{
+        //danh sách câu lệnh
+    }
+    while (dieu_kien_dung)
+-Lưu ý:
+    +Cũng giống như vòng lặp while, vòng lặp do-while sẽ lặp với số lần không xác định trước.
+    +Vòng lặp do-while sẽ thực hiện câu lệnh trước, rồi mới kiểm tra đk dừng.
+    +Vòng lặp do-while có thể bị treo nếu không thoã mãn đk dừng.
+    +Vòng lặp do-while luôn thực hiện ít nhất 1 câu lệnh (kể cả không thoã mãn điều kiện).
+            KHI NÀO DÙNG FOR-WHILE-DO WHILE
+-Tuỳ thuộc vào thói quen và kinh nghiệm của từng người.
+-Dựa vào yêu cầu bài toán:
+    +Nếu biết trước số lần lặp thì dùng vòng lặp for.
+    +Nếu không biết trước số lần lặp thì dùng while, do-while.
+            BREAK-CONTINUE-DIE-EXIT
+-Break: thoát khỏi vòng lặp khi chưa kết thúc.
+-Continue: nhảy qua vòng lặp kế tiếp.
+-Die và exit: dừng cả chương trình phía dưới.           

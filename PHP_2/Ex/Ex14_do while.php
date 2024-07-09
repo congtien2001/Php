@@ -15,6 +15,5 @@
     } while ($i >= 10);{
         echo "câu lệnh sai";
     }
-    /* vì i không thể lớn hơn = 10 
-    nên câu lệnh ngang echo là dừng */
+    /* vì i không thể lớn hơn = 10 nên câu lệnh ngang echo là dừng */
 ?>

@@ -45,6 +45,26 @@
     else {
         echo "Không tìm thấy số chẵn";
     }
+
+    /* Tính giai thừa của 1 số thập phân vào và hiển thị kết quả
+    Giải thích:
+    Input: nhập vào số n
+    Output: hiển thị kết quả N!
+    Công thức: N! = 1 * 2 * 3 * ... * N (N>0)
+    */
+    $n = 0;
+    //$n lớn hơn 0 mới tính giai thừa được
+    if ($n > 0){
+        //xử lý tính giai thừa
+        $result = 1;
+        for($i = 1; $i <= $n; $i++){
+            $result *= $i;
+        }
+        echo "Kết quả giai thừa là: ". $result. '<br>';
+    } 
+    else {
+        echo $n. " Không hợp lệ";
+    }
     
     
 

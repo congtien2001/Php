@@ -101,12 +101,19 @@ VD:
     +Vòng lặp do-while sẽ thực hiện câu lệnh trước, rồi mới kiểm tra đk dừng.
     +Vòng lặp do-while có thể bị treo nếu không thoã mãn đk dừng.
     +Vòng lặp do-while luôn thực hiện ít nhất 1 câu lệnh (kể cả không thoã mãn điều kiện).
-            KHI NÀO DÙNG FOR-WHILE-DO WHILE
+            KHI NÀO DÙNG FOR, WHILE, DO-WHILE
 -Tuỳ thuộc vào thói quen và kinh nghiệm của từng người.
 -Dựa vào yêu cầu bài toán:
     +Nếu biết trước số lần lặp thì dùng vòng lặp for.
     +Nếu không biết trước số lần lặp thì dùng while, do-while.
-            BREAK-CONTINUE-DIE-EXIT
+            BREAK, CONTINUE, DIE, EXIT
 -Break: thoát khỏi vòng lặp khi chưa kết thúc.
 -Continue: nhảy qua vòng lặp kế tiếp.
 -Die và exit: dừng cả chương trình phía dưới.           
+            INCLUDE, INCLUDE_ONCE, REQUIRE, REQUIRE_ONCE
+-4 lệnh: include, include_once, require, require_once dùng đẻ import file php khác vào php đang chạy.
+=> Cú pháp chung: include 'path_to_file' hoặc include('path_to_file');
+-Include: import file khác, nếu inport lỗi => các câu lệnh bên dưới vẫn chạy.
+-Include_once: import file khác, chỉ import 1 lần, nếu import lỗi => các câu lệnh bên dưới vẫn chạy.
+-Require: import file khác, nếu import lỗi => các câu lệnh bên dưới sẽ dừng.
+-Require_once: import file khác, chỉ import 1 lần, nếu import lỗi => các câu lệnh bên dưới sẽ dừng.

@@ -117,3 +117,7 @@ VD:
 -Include_once: import file khác, chỉ import 1 lần, nếu import lỗi => các câu lệnh bên dưới vẫn chạy.
 -Require: import file khác, nếu import lỗi => các câu lệnh bên dưới sẽ dừng.
 -Require_once: import file khác, chỉ import 1 lần, nếu import lỗi => các câu lệnh bên dưới sẽ dừng.
+            CHUỖI(STRING)
+-Chuỗi là mảng bao gồm các ký tự được kết thúc bằng ký tự rỗng (null)
+-Gán chuỗi cho biến: $ten_bien = 'Storm'; hoặc $ten_bien = "Storm";
+-Gán chuỗi cho hằng bằng: define('_AGENCY', 'STORM'); hoặc dèine('_AGENCY', "STORM");

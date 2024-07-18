@@ -135,4 +135,18 @@ VD: $arr = explode('|', 'Lập | Trình | PHP');
 -Strlen($str): hàm này trả về độ dài của chuỗi $str.
 VD: echo strlen('STORM');
 -Str_word_count($str): hàm này trả về số chữ trong chuỗi(không hỗ trợ tiếng Việt).
-
+-Str_repeat($str, $n): lặp chuỗi $str với $n lần.
+VD: echo str_repeat('STORM', 3);
+-Str_replace($search, $sreplace, $string): hàm này sẽ tìm chuỗi $search và thay thế thành chuỗi $replace trong chuỗi $string.
+VD: echo str_replace('-', '|','Lập-trình-PHP');
+-md5($str): hàm này sẽ mã hoá MD5 chuỗi $str (32 kí tự).
+VD: echo md5('123456');
+-sha1($str): hàm này sẽ mã hoá sha1 chuỗi $str (40 kí tự).
+VD: echo sha1('123456');
+-htmlentities($str): chuyển các thẻ html sang dạng thực thể. Có nghĩa in ra màn hình sẽ hiển thị các thẻ html.
+VD: echo htmlentities('<p>nguyen cong tien</p>');
+-html_entity_decide($str): chuyển dạng thực thể HTML sang định dạng HTML ban đầu. Có nghĩa trình duyệt sẽ biên dịch các thẻ HTML.
+VD: $str = htmlentities('<b>nguyen cong tien</b>');
+    echo html_entity_decode($str);
+-strip_tags($string, $allow_tags): hàm này bỏ các thẻ HTML trong chuỗi $string được khai báo ở $allow_tags (Nếu không khai báo sẽ loại bỏ tất cả thẻ).
+VD: echo strip_tags('<p>nguyen cong tien</p>');

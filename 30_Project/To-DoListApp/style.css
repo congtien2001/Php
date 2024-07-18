@@ -41,4 +41,41 @@ body {
   background: #ebfffc;
   border-radius: 50%;
   width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+.search button img {
+  width: 16px;
+}
+.werther-icon {
+  width: 170px;
+  margin-top: 30px;
+}
+.werther h1 {
+  font-size: 80px;
+  font-weight: 500;
+}
+.werther h2 {
+  font-size: 45px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+.col {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.col immg{
+  width: 40px;
+  margin-right: 10px;
+}
+.humidity, .wind{
+
 }

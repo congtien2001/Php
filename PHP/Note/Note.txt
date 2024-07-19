@@ -150,3 +150,11 @@ VD: $str = htmlentities('<b>nguyen cong tien</b>');
     echo html_entity_decode($str);
 -strip_tags($string, $allow_tags): hàm này bỏ các thẻ HTML trong chuỗi $string được khai báo ở $allow_tags (Nếu không khai báo sẽ loại bỏ tất cả thẻ).
 VD: echo strip_tags('<p>nguyen cong tien</p>');
+-substr($string, $start, $length): hàm này sẽ lấy chuỗi $string từ vị trí start với độ dài $length.
+VD: echo substr('NguyenCongTien', 0, 2);
+-strstr($string, $start str): tách một chuỗi từ kí tự cho trước $start_str cho đến hết chuỗi.
+VD: echo strstr(''NguyenCongTien', 'STORM');
+-strpos($str, $substr): tìm chuỗi $substr trong chuỗi $str. Nếu tìm thấy sẽ trả về số thứ tự và ngược lại trả về false.
+VD: echo strpos('STORM', 't');
+-substr_replace($str, $replace, $pos, $lent): hàm sẽ cắt bỏ 1 đoạn hoặc toàn bộ chuỗi và thay thế đoạn bị cắt bỏ bằng 1 chuỗi con khác.
+

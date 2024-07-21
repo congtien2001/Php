@@ -129,15 +129,15 @@ VD: echo "Nguyễn Công Tiến\"Storm\"-Học lập trình PHP";
 VD: echo 'Nguyễn Công Tiến \'STORM\'-Học lập trình PHP';
 -Kết luận: trùng dấu thì phải có escape (\), nếu không phải đổi dấu, có nghĩa là dùng "" thì ở trong phải là '' và ngược lại.
             CÁC HÀM XỬ LÝ Chuỗi
--Explode($delimiter, $string): hàm này sẽ chuyển 1 chuỗi $string thành 1 mảng các phần tử với kí tự tách mảng là $delimiter.
+-explode($delimiter, $string): hàm này sẽ chuyển 1 chuỗi $string thành 1 mảng các phần tử với kí tự tách mảng là $delimiter.
 VD: $arr = explode('|', 'Lập | Trình | PHP');
--Implode($delimiter, $piecesarray): hàm này sẽ nối các phần tử của mảng và các phần tử nối với nhau bởi chuỗi $delimiter.
--Strlen($str): hàm này trả về độ dài của chuỗi $str.
+-implode($delimiter, $piecesarray): hàm này sẽ nối các phần tử của mảng và các phần tử nối với nhau bởi chuỗi $delimiter.
+-strlen($str): hàm này trả về độ dài của chuỗi $str.
 VD: echo strlen('STORM');
--Str_word_count($str): hàm này trả về số chữ trong chuỗi(không hỗ trợ tiếng Việt).
--Str_repeat($str, $n): lặp chuỗi $str với $n lần.
+-str_word_count($str): hàm này trả về số chữ trong chuỗi(không hỗ trợ tiếng Việt).
+-str_repeat($str, $n): lặp chuỗi $str với $n lần.
 VD: echo str_repeat('STORM', 3);
--Str_replace($search, $sreplace, $string): hàm này sẽ tìm chuỗi $search và thay thế thành chuỗi $replace trong chuỗi $string.
+-str_replace($search, $sreplace, $string): hàm này sẽ tìm chuỗi $search và thay thế thành chuỗi $replace trong chuỗi $string.
 VD: echo str_replace('-', '|','Lập-trình-PHP');
 -md5($str): hàm này sẽ mã hoá MD5 chuỗi $str (32 kí tự).
 VD: echo md5('123456');
@@ -148,6 +148,7 @@ VD: echo htmlentities('<p>nguyen cong tien</p>');
 -html_entity_decide($str): chuyển dạng thực thể HTML sang định dạng HTML ban đầu. Có nghĩa trình duyệt sẽ biên dịch các thẻ HTML.
 VD: $str = htmlentities('<b>nguyen cong tien</b>');
     echo html_entity_decode($str);
+
 -strip_tags($string, $allow_tags): hàm này bỏ các thẻ HTML trong chuỗi $string được khai báo ở $allow_tags (Nếu không khai báo sẽ loại bỏ tất cả thẻ).
 VD: echo strip_tags('<p>nguyen cong tien</p>');
 -substr($string, $start, $length): hàm này sẽ lấy chuỗi $string từ vị trí start với độ dài $length.
@@ -157,4 +158,21 @@ VD: echo strstr(''NguyenCongTien', 'STORM');
 -strpos($str, $substr): tìm chuỗi $substr trong chuỗi $str. Nếu tìm thấy sẽ trả về số thứ tự và ngược lại trả về false.
 VD: echo strpos('STORM', 't');
 -substr_replace($str, $replace, $pos, $lent): hàm sẽ cắt bỏ 1 đoạn hoặc toàn bộ chuỗi và thay thế đoạn bị cắt bỏ bằng 1 chuỗi con khác.
+VD: 
+
+-strtolower($str): chuyển tất cả kí tự sang viết thường.
+VD: echo strtolower('STORM');
+-strtoupper($str): chuyển tất cả kí tự thành chữ hoa.
+VD: echo strtoupper('storm');
+-ucfirst($str): chuyển chữ cái đầu tiên sang viết hoa.
+VD: echoucfirst('storm');
+-lcfirst($str): chuyển chữ cái đầu tiên sang viết thường.
+VD: echo lcfirst('STORM');
+
+-ucwords($str): chuyển các kí tự đầu tiên trong chuỗi sang viết hoa.
+VD: echo ucwords($str);
+-$trim($str, $char): xoá kí tự ở đầu và cuối, nếu không nhập $char sẽ hiểu là kí tự trắng.
+VD: echo $trim('STORM');
+-json_decode($json, $is_array): chuyễn chuỗi dạng JSON thành mảng hoặc OBJECT. Nếu $is_array = true trả về dạng mảng, nếu không thành OBJECT.
+-json_encode($array_or_object): chuyển array hoặc object thành JSON.
 

@@ -176,3 +176,16 @@ VD: echo $trim('STORM');
 -json_decode($json, $is_array): chuyễn chuỗi dạng JSON thành mảng hoặc OBJECT. Nếu $is_array = true trả về dạng mảng, nếu không thành OBJECT.
 -json_encode($array_or_object): chuyển array hoặc object thành JSON.
 
+            ĐỊNH NGHĨA HÀM
+-Hàm là một chương trình con thực hiện một khối công việc đc lặp đi lặp lại nhiều lần trong khi chạy chương trình.
+-Hàm dùng tách một khối công việc cụ thể để chương trình đỡ phức tạp.
+-Tác dụng của hàm:
+    + Dễ bảo trì, quản lý.
+    +Có thể tái sử dụng code.
+-Cú pháp định nghĩa hàm:
+    function ten_ham(danh_sach_tham_so){
+        //nội dung hàm
+    }
+    +ten_ham: do chúng ta tự đặt(động từ).
+    +danh_sach_tham_so: danh sách các biến cách nhau bởi dấu phẩy(,).
+-Cú pháp gọi hàm: ten_ham(danh_sach_tham_tri).

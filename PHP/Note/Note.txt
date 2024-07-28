@@ -189,3 +189,17 @@ VD: echo $trim('STORM');
     +ten_ham: do chúng ta tự đặt(động từ).
     +danh_sach_tham_so: danh sách các biến cách nhau bởi dấu phẩy(,).
 -Cú pháp gọi hàm: ten_ham(danh_sach_tham_tri).
+
+            HÀM RETURN VÀ KHÔNG RETURN
+-Hàm return(hàm có giá trị trả về): hàm có từ khoá return khi kết thúc hàm.
+-Lưu ý: nếu từ khoá return đc gọi ra => các câu lệnh phía dưới không chạy nữa.
+-Hàm không return: hàm không có từ khoá return.
+            BIẾN CỤC BỘ, BIẾN TOÀN CỤC, BIẾN TĨNH
+-Biến cục bộ: là biến đc sử dụng trong phạm vi hàm.
+-Biến cục bộ không đc sử dụng bên ngoài hàm hoặc trong hàm khác.
+
+-Biến toàn cục: là biến đc sử dụng bất kì đâu.
+-Biến toàn cục đc khai báo ở ngoài hàm.
+-Muốn sử dụng biến toàn cục bên trong hàm => phải khai báo bằng từ khoá global.
+
+-Biến tĩnh: không thay đổi giá trị khi gọi hàm.

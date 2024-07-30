@@ -203,3 +203,8 @@ VD: echo $trim('STORM');
 -Muốn sử dụng biến toàn cục bên trong hàm => phải khai báo bằng từ khoá global.
 
 -Biến tĩnh: không thay đổi giá trị khi gọi hàm.
+
+            ĐỆ QUY TRONG PHP
+-Dệ quy trong PHP: là quá trình trong đó 1 phương thức gọi lại chính nó một cách liên tiếp, sử dụng đệ quy giúp code chặt chẽ hơn nhưng sẽ khó để hiểu hơn.
+VD:
+    +Dãy số Fibonacci: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...Tính số fibonacci thứ n.

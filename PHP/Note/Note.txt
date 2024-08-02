@@ -208,3 +208,14 @@ VD: echo $trim('STORM');
 -Dệ quy trong PHP: là quá trình trong đó 1 phương thức gọi lại chính nó một cách liên tiếp, sử dụng đệ quy giúp code chặt chẽ hơn nhưng sẽ khó để hiểu hơn.
 VD:
     +Dãy số Fibonacci: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...Tính số fibonacci thứ n.
+
+            HÀM ISSET VÀ HÀM EMPTY
+-Hàm isset():
+    +Kiểm tra biến có tồn tại hay không.
+    +Không kiểm tra về dữ liệu của biến.
+    +Không kiểm tra được trường hợp null.
+-Hàm empty():
+    +Kiểm tra biến có tồn tại không và kiểu dữ liệu.
+    +Chỉ trả về kiểu dữ liệu Boolean.
+    +Trả về true nếu: không tồn tại hoặc rỗng, =0, '0', trống, null, array rỗng, object rỗng, false.
+    

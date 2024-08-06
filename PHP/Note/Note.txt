@@ -219,3 +219,12 @@ VD:
     +Chỉ trả về kiểu dữ liệu Boolean.
     +Trả về true nếu: không tồn tại hoặc rỗng, =0, '0', trống, null, array rỗng, object rỗng, false.
     
+            MẢNG TRONG PHP
+-Mảng là một cấu trúc dữ liệu mà lưu giữ một hoặc nhiều kiểu giá trị giống nhau trong một giá trị đơn.
+-Mảng có thể là mảng 1 chiều hoặc mảng đa chiều.
+-Để khai báo mảng, sử dụng hàm array() hoặc [] (với phiên bản php 5.4 trở lên).
+VD: $arr = array('HTML', 'JS', 'PHP');
+-Xem cấu trúc mảng: 
+    echo'<pre>';
+    print_r($car_arr);
+    echo'</pre>';

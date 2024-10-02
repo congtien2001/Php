@@ -1,4 +1,4 @@
-<?php 
+ <?php 
     //HÀM LẶP LẠI
     echo '-Hàm str_repeat: '.'<br>';
     $chuoi5 = 'STORM';

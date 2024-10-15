@@ -1,20 +1,345 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Gradient Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        background-color: #f8f8f8;
+        color: #000;
+      }
+      .container {
+        display: flex;
+      }
+      .sidebar {
+        width: 250px;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        height: 100vh;
+      }
+      .sidebar h1 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .sidebar .menu {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar .menu li {
+        margin-bottom: 20px;
+      }
+      .sidebar .menu li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+      }
+      .sidebar .menu li a i {
+        margin-right: 10px;
+      }
+      .sidebar .menu li.active a {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .sidebar .follow-us {
+        margin-top: 50px;
+      }
+      .sidebar .follow-us a {
+        text-decoration: none;
+        color: #000;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .sidebar .follow-us a i {
+        margin-right: 10px;
+      }
+      .sidebar .theme-toggle {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+      }
+      .sidebar .theme-toggle span {
+        margin-right: 10px;
+      }
+      .main-content {
+        flex-grow: 1;
+        padding: 20px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .header .referral {
+        display: flex;
+        align-items: center;
+      }
+      .header .referral span {
+        margin-right: 10px;
+      }
+      .header .account-status {
+        display: flex;
+        align-items: center;
+      }
+      .header .account-status span {
+        margin-right: 10px;
+      }
+      .header .account-status .progress-bar {
+        width: 100px;
+        height: 10px;
+        background-color: #e0e0e0;
+        border-radius: 5px;
+        overflow: hidden;
+        margin-right: 10px;
+      }
+      .header .account-status .progress-bar .progress {
+        width: 50%;
+        height: 100%;
+        background-color: #ffd700;
+      }
+      .header .account-status .total-points {
+        font-weight: 700;
+      }
+      .header .profile {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #c0c0c0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: #fff;
+      }
+      .greeting {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .cards {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 48%;
+      }
+      .card h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .card .points {
+        font-size: 36px;
+        font-weight: 700;
+      }
+      .node-status {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      .node-status h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .node-status .status {
+        display: flex;
+        justify-content: space-between;
+      }
+      .node-status .status div {
+        width: 48%;
+      }
+      .node-status .status div p {
+        margin: 0;
+        font-size: 16px;
+      }
+      .reward-stats {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      .reward-stats h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .reward-stats .chart {
+        height: 200px;
+        background-color: #e0e0e0;
+        border-radius: 10px;
+      }
+      .reward-stats .legend {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+      .reward-stats .legend div {
+        display: flex;
+        align-items: center;
+      }
+      .reward-stats .legend div span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      .reward-stats .legend .network span {
+        background-color: #d0b0ff;
+      }
+      .reward-stats .legend .referrals span {
+        background-color: #f0f0b0;
+      }
+      .reward-stats .legend .boost span {
+        background-color: #b0f0b0;
+      }
+      .reward-stats .legend .bonus span {
+        background-color: #b0b0f0;
+      }
+      .time-limited {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .time-limited h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .time-limited .icon {
+        font-size: 50px;
+        color: #d0b0ff;
+        margin-bottom: 10px;
+      }
+      .time-limited .description {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      .time-limited .join-button {
+        background-color: #000;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+    </style>
   </head>
   <body>
-    <h1>Anh hùng xạ điêu</h1>
-    <h2>Chương 1</h2>
-    <h3>Phần 1</h3>
-    <h3>Phần 2</h3>
-    <h2>Chương 2</h2>
-    <h3>Phần 1</h3>
-    <h4>Tóm tắt Chương 2</h4>
-    <h2>Chương 3</h2>
-    <h3>Phần 1</h3>
-    <h3>Phần 2</h3>
+    <div class="container">
+      <div class="sidebar">
+        <h1>Gradient</h1>
+        <ul class="menu">
+          <li class="active">
+            <a href="#"><i class="fas fa-home"></i> Overview</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-server"></i> My Nodes</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-gift"></i> Rewards</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-user-friends"></i> Referrals</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-user"></i> Profile</a>
+          </li>
+        </ul>
+        <div class="follow-us">
+          <a href="#"><i class="fab fa-twitter"></i> X(Twitter)</a>
+          <a href="#"><i class="fab fa-discord"></i> Discord</a>
+          <a href="#"><i class="fas fa-globe"></i> Website</a>
+        </div>
+        <div class="theme-toggle">
+          <span>Theme</span>
+          <input type="checkbox" />
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="header">
+          <div class="referral">
+            <span>Referred:</span>
+            <span>0</span>
+            <button>Copy Referral Link</button>
+          </div>
+          <div class="account-status">
+            <span>Account Status:</span>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <span class="total-points">Total: 134.75 pt</span>
+            <div class="profile">C</div>
+          </div>
+        </div>
+        <div class="greeting">GM, Công Tiến Nguyễn (STORM)! 👋</div>
+        <div class="cards">
+          <div class="card">
+            <h2>Season 0 Rewards</h2>
+            <div class="points">134.75 Points</div>
+          </div>
+          <div class="card">
+            <h2>Today's Rewards</h2>
+            <div class="points">21.25 Points</div>
+          </div>
+        </div>
+        <div class="node-status">
+          <h2>Node Status</h2>
+          <div class="status">
+            <div>
+              <p>Nodes</p>
+              <p>Total: 15</p>
+            </div>
+            <div>
+              <p>Sentry Node</p>
+              <p>Connected: 1</p>
+            </div>
+          </div>
+        </div>
+        <div class="reward-stats">
+          <h2>Reward Stats</h2>
+          <div class="chart"></div>
+          <div class="legend">
+            <div class="network"><span></span> Network</div>
+            <div class="referrals"><span></span> Referrals</div>
+            <div class="boost"><span></span> Boost</div>
+            <div class="bonus"><span></span> Bonus</div>
+          </div>
+        </div>
+        <div class="time-limited">
+          <h2>Time-Limited</h2>
+          <div class="icon"><i class="fas fa-award"></i></div>
+          <div class="description">
+            Get 1,000 EXP<br />Follow us on X(Twitter)
+          </div>
+          <a href="#" class="join-button">Click to Join</a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

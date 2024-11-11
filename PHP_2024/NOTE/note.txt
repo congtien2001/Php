@@ -1,0 +1,3 @@
+how to print out data? 
+multiple commands: 
+-echo, var_dump, var_export, print_r,...
